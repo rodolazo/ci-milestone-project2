@@ -105,7 +105,30 @@ let game = {
     },
     
     //Print result of selection on the board game
-    showResult: function(isCorrect) {        
+    showResult: function(isCorrect) {
+        // select the DOM element
+        let resultDiv = document.getElementById('result');
+        let result = '';
+        
+        // checks
+        if(isCorrect) {
+          result = 'Correct Answer!';
+        }
+        else {
+          // get the current question
+          let currQuestion = questions[this.currLocation];
+          
+          // Obtain index of right answer
+          let correctAnswerIndex = currQuestion.correctAnswer;
+          
+          // Obtain the correct answer
+          let correctAnswerText = currQuestion.alternatives[correctAnswerIndex];
+          
+          result = `Wrong! The correct answer is: ${correctAnswerText}`;
+        }
+        
+        resultDiv.textContent = result;
+        
     }
     
 };
