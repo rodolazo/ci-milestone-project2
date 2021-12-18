@@ -37,6 +37,7 @@ The game has 20 questions after which the score is reset and the game starts aga
   ![HTML Validator ](https://raw.githubusercontent.com/rodolazo/ci-milestone-project2/main/assets/images/html-validator.png)
 - CSS
   - No Error Found. [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frodolazo.github.io%2Fci-milestone-project2%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+  ![CSS Validator](https://raw.githubusercontent.com/rodolazo/ci-milestone-project2/main/assets/images/css-validator.png)
   
 - JS
   - No error found using the JSHint
