@@ -2,7 +2,7 @@ let game = {
     /**
      * Method: Initialize the game
      */
-     begin: function() {
+    begin: function() {
     
         //Property to know the location of the question
         this.currLocation = 0;
@@ -27,12 +27,12 @@ let game = {
           });
         });
     },
-
+    
     /**
      * Place the spanish word and all the english alternative on the list
      * @param {object} q 
      */
-     showQuery: function(q) {
+    showQuery: function(q) {
     
         // show question spanish
         let titleDiv = document.getElementById('spanish');
@@ -50,7 +50,7 @@ let game = {
      * Verify the option selected by the user
      * @param {integer} userSelected 
      */
-     checkAnswer: function(userSelected) {
+    checkAnswer: function(userSelected) {
 
         console.log(this.currLocation);
     
@@ -76,7 +76,7 @@ let game = {
     /**
      * Update position of the Array
      */
-     increasePos: function() {
+    increasePos: function() {
 
         this.currLocation++;
 
@@ -99,7 +99,7 @@ let game = {
     /**
      * Print score on the board game
      */
-     updateScore: function() {
+    updateScore: function() {
         let scoreDiv = document.getElementById('score');
         scoreDiv.textContent = `Your score: ${this.score}`;
     },
