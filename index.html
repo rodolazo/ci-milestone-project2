@@ -1,4 +1,3 @@
-Hello world
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,19 +25,30 @@ Hello world
     <h1>Language Game</h1>
   </header>
 
-  <nav>
-    <a href="index.html" >Home</a>
-    <a href="#">About</a>		
+  <nav class="w3-bar w3-container w3-black">
+    <a href="index.html" class="w3-bar-item w3-button active-page">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-right w3-button" onclick="document.getElementById('id01').style.display='block'">About</a>		
 	</nav>
 
-	<div>    
+  <!-- The Modal -->
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>The present program has been developed with HTML , CSS and JS</p>
+        <p>The system is giving a spanish word and the user has to choose the english word that match it</p>
+      </div>
+    </div>
+  </div>
+
+	<div id="wrapper">    
 		<div id="spanish"></div>
     
 		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<li class="options"></li>
+			<li class="options"></li>
+			<li class="options"></li>
+			<li class="options"></li>
 		</ul>  
 
     <div id="instructions">To start the game click on the english word that match the spanish one</div>
@@ -54,7 +64,7 @@ Hello world
 
 	</div>
 
-  <footer>Developed by phoenixrlv</footer>
+  <footer class="w3-bar w3-container w3-black w3-center">Developed by phoenixrlv</footer>
   
   <script src='assets/js/questions.js'></script>
   <script src='assets/js/script.js'></script>
