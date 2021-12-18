@@ -27,6 +27,24 @@ let game = {
           });
         });
     },
+
+    /**
+     * Place the spanish word and all the english alternative on the list
+     * @param {object} q 
+     */
+     showQuery: function(q) {
+    
+        // show question spanish
+        let titleDiv = document.getElementById('spanish');
+        titleDiv.textContent = q.spanish; 
+      
+        // show alternatives
+        let arrLi = document.querySelectorAll('.options');
+      
+        arrLi.forEach(function(element, i){
+          element.textContent = q.alternatives[i];
+        });
+    },
     
     /**
      * Verify the option selected by the user
