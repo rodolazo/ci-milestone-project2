@@ -76,7 +76,24 @@ let game = {
     /**
      * Update position of the Array
      */
-    increasePos: function() {
+     increasePos: function() {
+
+        this.currLocation++;
+
+        if(this.currLocation == 1)       {
+          document.getElementById('instructions').style.display = "none";
+        }
+        
+        if(this.currLocation < questions.length){
+          this.showQuery(questions[this.currLocation])
+        }else{
+          console.log("Ha finalizado el juego");
+          console.log(this.currLocation);
+          //this.currLocation = 0;
+          //this.score = 0;
+          document.getElementById('restart').style.display='block';
+        }
+        
     },
     
     /**
