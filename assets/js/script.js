@@ -99,7 +99,9 @@ let game = {
     /**
      * Print score on the board game
      */
-    updateScore: function() {
+     updateScore: function() {
+        let scoreDiv = document.getElementById('score');
+        scoreDiv.textContent = `Your score: ${this.score}`;
     },
     
     //Print result of selection on the board game
