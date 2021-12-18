@@ -50,7 +50,27 @@ let game = {
      * Verify the option selected by the user
      * @param {integer} userSelected 
      */
-    checkAnswer: function(userSelected) {
+     checkAnswer: function(userSelected) {
+
+        console.log(this.currLocation);
+    
+        let currQuestion = questions[this.currLocation];
+        
+        if(currQuestion.correctAnswer == userSelected) {
+          // correct
+          console.log('correct');
+          this.score++;
+          this.updateScore();
+          this.showResult(true);
+        }
+        else {
+          // not correct
+          console.log('wrong');
+          this.showResult(false);
+        }                
+        
+        // increase position
+        this.increasePos();
     },
     
     /**
